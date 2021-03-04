@@ -1,8 +1,8 @@
 # Weberama
-Bienvenue sur le depôt de mon site internet [Le lien](weberama.herokuapp.com).__
-[x]  Il est hébergé sur heroku.__
-[x]  Programmé en Python :snake:.__
-[x]  Style basé avec Bootstrap.__
-[x]  Cléfs de sécu*t* à générer avec le module de cryptage.__
-__
+Bienvenue sur le depôt de mon site internet [Le lien](weberama.herokuapp.com).<br />
+[x]  Il est hébergé sur heroku.<br />
+[x]  Programmé en Python :snake:.<br />
+[x]  Style basé avec Bootstrap.<br />
+[x]  Cléfs de sécu*t* à générer avec le module de cryptage.<br />
+<br />
 Bisous :heart:
