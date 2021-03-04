@@ -1,0 +1,30 @@
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Weberama - Infos</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{{url_for('static',filename = 'style.css')}}">
+    <link rel="shortcut icon" type="image/jpg" href="static/icon_petit.png">
+    </head>
+    <body>
+        <h1 class="info">
+            Informations sur mes services.
+        </h1>
+        <a href="/">Retour</a>
+        <div class="ensemble">
+            <label class="param" for="comment">Informations sur la fabrication des sites:</label>
+            <p class="textpara" id="comment">
+                Je développe mes sites avec le langage Python grâce au framework Flask. J'utilise la base de donnée Postgres. 
+                L'hébergeur que j'utilise est Heroku. Biensur, les templates sont fait avec HTML5 et CSS3, ainsi que du JavaScript pour les animations.
+            </p>
+        </div>
+        <div class="ensemble">
+            <label for="billing" class="param">Payement:</label>
+            <p class="textpara" id="billing">
+                Le prix est variable selon la taille du site, le temps qu'il a pris à faire et la précision des connaissances
+                utilisée. Il reste que le prix moyen est d'environ à 200€.
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<div class="tableau">
+<table class="vivits">
+<td>
+    <h3>Visites</h3>
+    <tr>
+        <th>
+            IP:
+        </th>
+        <th>
+            URL:
+        </th>
+        <th>
+            Agent:
+        </th>
+    </tr>
+    {% for x in range(longv): %}
+        <tr>
+            <td>
+                {{ips[x]}}
+            </td>
+            <td>
+                {{urls[x]}}
+            </td>
+            <td>
+                {{agents[x]}}
+            </td>
+            <td>
+                {{dates[x]}}
+            </td>
+        </tr>
+    {% endfor %}
+</td>
+</table>
+</div>
+<style>
+    table{
+        border: solid 1px grey;
+        padding: 7px;
+        font-size: 90%;
+        margin: 10px;
+    }
+
+    table.vivits{
+        font-size: 80%;
+    }
+    th{
+        border: solid 1px rgb(255, 78, 78);
+        padding: 7px;
+    }
+
+    td{
+        border: solid 1px rgb(78, 119, 255);
+        padding: 7px;
+        max-width: 270px;
+    }
+
+
+
+</style>
+{% endblock %}

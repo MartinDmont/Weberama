@@ -1,0 +1,58 @@
+<head>
+  <title>Création de mot de passe</title>
+  <link rel="shortcut icon" type="image/jpg" href="static/icon_petit.png">
+
+</head>
+{% block content %}
+<div class="conent">
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+    <div class="alert alert-danger" role="alert">
+        {{message}}
+      </div>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<form action="/client/create" method="POST">
+    <h3>Créer un mot de passe</h3>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Adresse email:</label>
+              <input type="email" class="form-control-plaintext" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{email}}">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Mot de passe:</label>
+              <input type="password" name="passw" class="form-control" id="exampleInputPassword1" minlength="5" placeholder="Mot de passe">
+            </div>
+            <button type="submit" class="btn btn-primary">Créer puis suivre</button>
+            <small id="emailHelp" class="form-text text-muted">Ce mot de passe vous permettera d'avoir un suivi sur la création de votre site.</small>
+            <a href="/deconnect" class="cancel">Annuler/ Retour</a>
+  </form>
+</div>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+
+form{background-color: white;
+  border-radius: 7px;
+  padding: 10px;
+  margin: auto;
+  max-width: 500px;
+  justify-content: center;
+  vertical-align: 40px;
+  margin-top: 13%;
+  position: relative;
+  line-height: 30px;
+}
+input{
+    border:solid 1px black;
+}
+.btn{
+  background-color: rgb(23, 153, 23);
+}
+</style>
+{% endblock %}

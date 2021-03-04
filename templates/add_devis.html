@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<form action="#" method="POST">
+    <h3>Créer un devis</h3>
+    <input type="text" name = "titre" placeholder="email">
+    <br>
+    <input type="text" name="link" placeholder="code" size="7" maxlength="7" minlength="7"><br>
+    {% for x in range(1,11) %}
+    <div class="row">
+        <div class="col">
+          <input name = "descr{{x}}"type="text" class="form-control" placeholder="Description">
+        </div>
+        <div class="col">
+          <input name = "prix{{x}}" type="number" class="form-control" placeholder="Prix">
+        </div>
+      </div><br>
+    {% endfor %}
+      
+    <input type="submit" class="btn btn-primary" value="Envoyer">
+</form>
+<style>
+    input{
+        max-width: 300px;
+        margin: 0%;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %}
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
+<div class="tableau">
+    <table>
+        <td>
+            <h3>Requêtes</h3>
+            <tr>
+                <th>
+                    Titres:
+                </th>
+                <th>
+                    Description:
+                </th>
+                <th>
+                    Téléphone:
+                </th>
+                <th>
+                    Email:
+                </th>
+                <th>
+                    Type:
+                </th>
+                <th>
+                    Responsive:
+                </th>
+                <th>
+                    Username:
+                </th>
+            </tr>
+            {% for x in range(long): %}
+                <tr>
+                    <td>
+                        {{titles[x]}}
+                    </td>
+                    <td>
+                        {{descr[x]}}
+                    </td>
+                    <td>
+                        {{tel[x]}}
+                    </td>
+                    <td>
+                        {{email[x]}}
+                    </td>
+                    <td>
+                        {{types[x]}}
+                    </td>
+                    <td>
+                        {{responsive[x]}}
+                    </td>
+                    <td>
+                        {{username[x]}}
+                    </td>
+                </tr>
+            {% endfor %}
+        </td>
+    </table>
+    </div>
+    <style>
+        table{
+            border: solid 1px grey;
+            padding: 7px;
+            font-size: 90%;
+            margin: 10px;
+        }
+    
+        table.tableau{
+            font-size: 80%;
+        }
+        th{
+            border: solid 1px rgb(255, 78, 78);
+            padding: 7px;
+        }
+    
+        td{
+            border: solid 1px rgb(78, 119, 255);
+            padding: 7px;
+            max-width: 270px;
+        }
+    
+    
+    
+    </style>
+{% endblock %}

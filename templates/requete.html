@@ -1,0 +1,129 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Weberama - Requête</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="{{url_for('static',filename = 'style.css')}}">
+    <link rel="shortcut icon" type="image/jpg" href="static/icon_petit.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+  <h2 class="ask"> Demander un site :</h2>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+    <div class="alert alert-danger" role="alert">
+      {{message}}
+    </div>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+<a class="retour" href="/"><i class="bi bi-arrow-left-short bi-no"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+</svg></i> Retour</a>
+<form action="#" method="POST">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Titre:</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="name" placeholder="Nom du site"required>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Type de site</label>
+    <select name="type" class="form-control" id="exampleFormControlSelect1" required>
+      <option selected="true" disabled="disabled">Choisir</option>  
+      <option value="vitrine">Vitrine</option>
+      <option value="commerce">Commerce</option>
+      <option value="blog">Blog</option>
+      <option value="colab">Collaboratif</option>
+      <option value="autre">Autre (à préciser en description)</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description:</label>
+    <textarea name="descr" class="form-control" id="exampleFormControlTextarea1" rows="7"required></textarea>
+  </div>
+  <div class="form-group">
+    <h3 class="important">Autres options:</h3>
+  </div>
+  <div class="form-check">
+    <input name="resp" class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+    <label class="form-check-label" for="defaultCheck1">
+      Adapté aux smartphones?
+    </label>
+  </div>
+  <div class="form-group">
+    <h3 class="important">Comment vous joindre?</h3>
+  </div>
+
+  <div class="form-check">
+    <label for="yourBox" class="form-check-label">Téléphone:</label>
+    <input type="checkbox" id="yourBox" class="check"/>
+    <input type="tel" placeholder="Téléphone" id="yourText" name="telephone" disabled required />
+    <p class="precision">Activez la case pour pouvoir entrer votre numéro de téléphone.</p>
+  </div>
+  <div class="form-check">
+    <label for="yourEmail" class="form-check-label">Email:</label>
+    <input type="checkbox" id="yourEmailbox" class="check" />
+    <input type="email" placeholder="Email" id="yourEmail" name="email" disabled required/>
+    <p class="precision">Activez la case pour pouvoir entrer votre adresse email.</p>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Votre nom:</label>
+    <input name="user" type="text" class="form-control" id="exampleFormControlInput1" placeholder="NOM Prénom"required>
+  </div>
+  <p class="plus">Si aucun moyen de contact n'est rempli, votre demande ne sera pas prise en compte.</p>
+  <p class="plus">Un devis vous sera envoyé dès la réception de votre demande.</p>
+  <br>
+  <input type="submit" value="Envoyer la demande" class="valid">
+  <a href="/" class="cancel">Annuler</a>
+</form>
+
+<!-- hello gyes -->
+
+<script>document.getElementById('yourBox').onchange = function() {
+    document.getElementById('yourText').disabled = !this.checked;};
+
+    document.getElementById('yourEmailbox').onchange = function() {
+    document.getElementById('yourEmail').disabled = !this.checked;};
+
+    document.addEventListener('DOMContentLoaded', function () {
+    const inputs = Array.from(document.querySelectorAll('input[name=telephone], input[name=email]'));
+    const inputListener = e => inputs.filter(i => i !== e.target).forEach(i => i.required = !e.target.value.length);
+
+    inputs.forEach(i => i.addEventListener('input', inputListener));
+});
+</script>
+<style>form{
+  justify-content: center;
+  margin-top: 0%;
+  max-width: 450px;
+  margin: 0px auto;
+}
+
+.requete{
+  width: 500px;
+  overflow-x: hidden ;
+  overflow-y: auto;
+  padding: 10px;
+  margin: auto;
+  align-self: center;
+  margin-top: 0%;
+}
+
+label{
+  display: inline-block;
+  text-align: right;
+}
+
+.check{
+  background-color: white;
+  padding: inherit;
+}
+</style>
+</body>

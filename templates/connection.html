@@ -1,0 +1,103 @@
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
+  <title>Weberama - Connection</title>
+  <link rel="shortcut icon" type="image/jpg" href="static/icon_petit.png">
+
+</head>
+<body>
+
+
+<form action="#" method="POST">
+    <h3><img src="/static/icon_petit.png" alt="icone" class="image"> Accès à l'avancement de votre projet</h3>
+    <h4>(2/2) Connection par mot de passe:</h4>
+            <div>
+              Addresse email : {{email}}
+            </div>
+            <div class="form-group">
+              <input type="password" name="passw" class="email" id="exampleInputEmail1" placeholder="Mot de passe" aria-describedby="emailHelp" >
+            </div>
+            <div>
+            <button type="submit" class="btn" style="margin-right: 10px;">Se connecter</button><a class="cancel" href="/deconnect">Annuler</a>
+            </div>
+
+          <div>
+            <small>Veuillez entrer le mot de passe que vous avez attribuer à votre devis.</small>
+          </div>
+          <div>
+            Mot de passe perdu ? <a href="mailto:martinsite@protonmail.com">En demander un nouveau.</a>
+          </div>
+  </form>
+      
+</body>
+  <style>
+      body{
+        font-family: Noto Sans JP;
+        background-size: 100%;
+        margin-top: 0%;
+        background-image: url(/static/bg2.jpg);
+      }
+      body::after{
+        background-image: url(/static/bg2.jpg);
+        background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.75;
+      }
+      form{background-color: white;
+        border-radius: 7px;
+        padding: 10px;
+        max-width: 500px;
+        margin:0 auto;
+        position: relative;
+        top: 95;
+      }
+      .email{
+        font-size: 120%;
+        padding: 5px;
+        border: solid 1px rgb(187, 187, 187);
+        border-radius: 7px;
+      }
+      input{
+          border:solid 1px black;
+      }
+      .cancel{
+        color: red;
+      }
+      .btn{
+        background-color: rgb(23, 90, 153);
+        padding: 7px;
+        font-size:90%;
+        border:solid 1px rgb(136, 136, 136);
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+
+    }
+    div{
+      margin: 10px;
+    }
+    a{
+      color: rgb(51, 104, 153);
+      text-decoration: None;
+    }
+    a:hover{
+      text-decoration: underline;
+    }
+    .title{
+      margin-top: 0%;
+      background-color: white;
+      max-width: 530px;
+      border-radius: 7px;
+    }
+    .image{
+      width: 50px;
+      position: relative;
+      top: 14px;
+    }
+  </style>

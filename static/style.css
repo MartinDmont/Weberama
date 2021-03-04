@@ -1,0 +1,359 @@
+@keyframes example {
+    0%   {opacity:0.5;}
+    25%  {opacity:0.7;}
+    50%  {opacity:0.85;}
+    100% {opacity:1;}
+  }
+
+h1,h2{
+    font-family: 'Quicksand', sans-serif;
+    color:rgb(0, 0, 0);
+    font-size: 800%;
+    font-weight: 100;
+top: 0px;
+left: 0px;
+position: relative;
+overflow: visible;
+text-align: left;
+margin: 0%;
+}
+
+.start{
+    margin-bottom: 100px;
+}
+
+#square{
+    float: left;
+    width: 70%;
+    height: 5px;
+    background-color: rgb(255, 72, 0);
+    border-radius: 30px;
+}
+
+
+body{
+    margin: 0px;
+    position: relative;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+textarea{
+    font-family: serif;
+    font-weight: 200;
+    cursor: context-menu;
+}
+
+.menu{
+    font-size: smaller;
+    justify-content: right;
+    background-color: #fff;
+}
+
+div.box{
+    flex: 1 1 auto;
+    max-width: 400px;
+    margin: 10px;
+    justify-content: center;
+    background-color: rgb(255, 199, 125);
+    opacity: 0.5;
+    padding: 50px;
+    border-radius: 7px;
+}
+
+div.box:hover{
+    animation-name: example;
+    animation-duration: 1s;
+    opacity: 1;
+}
+
+.titre{
+    font-size: larger;
+}
+
+a.retour{
+    margin-left: 25px;
+    margin-top: 0%;
+}
+
+div.content{
+    padding: 20px;
+    background-image: url(/static/computer7.jpg);
+    background-position: bottom;
+    background-size: 100%;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    /* background-color: rgb(255, 168, 55); */
+    color: rgb(58, 58, 58);
+    margin: Opx;
+    font-weight: 600;
+    border-bottom: solid 2px rgb(255, 251, 0);
+}
+
+
+
+
+
+p.foot{
+    margin: 10px;
+}
+
+h3{
+    text-align: left;
+    font-weight: 300;
+    color: #d73a49;
+}
+
+h2.ask{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 300%;
+    color:rgb(0, 0, 0);
+    font-weight: 100;
+    margin: 30px;
+}
+
+div.list{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navigation{
+    background-color: #db7147;
+    color: #fff;
+    padding: 10px;
+}
+
+.requ_top{
+    margin-bottom: 20px;
+}
+
+a.anav{
+    font-weight: 700;
+    color: #fff;
+}
+
+li.nav{
+    list-style: none;
+    display: inline;
+    padding: 10px;
+    justify-content: center;
+}
+
+label.important{
+    padding: 10px;
+    text-decoration: underline;
+    margin: 50px;
+}
+
+.valid{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: greenyellow;
+    color: white;
+    font-weight: bold;
+    border: none;
+    color: #fff;
+    background-color:  #2ea44f;
+    border-color: rgba(27,31,35,0.15);
+    box-shadow: var(--color-btn-primary-shadow),var(--color-btn-primary-inset-shadow);
+}
+
+.valid:hover{
+    cursor: pointer;
+}
+
+.valid:active{
+    cursor: wait;
+}
+
+
+.contact{
+    padding: 10px;
+}
+
+.intro{
+    text-align: center;
+    margin: 70px;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+input.check:hover{
+    cursor: pointer;
+}
+
+input{
+    font-size: 1em;
+    background-color:#ffffff;
+    margin: 5px;
+    box-sizing: border-box;
+    border: solid 1px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    padding: 2px;
+}
+a{
+    padding: 10px;
+}
+.precision{
+    text-align: left;
+    font-size: 75%;
+    margin-left: 10px;
+}
+a.nav-link {
+    padding: 10px;
+    margin: 20px;
+    margin-top: 20px;
+}
+.bi{
+    vertical-align: -.100em;
+}
+
+.bi-no{
+    vertical-align: 0em;
+}
+
+
+.card{
+    margin: 10px;
+}
+
+.card-body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size:1rem;
+    font-weight:400;
+    line-height:1.5;
+    color:#212529;
+    text-align:left;
+    background-color:#fff;
+}
+a.cancel{
+    font-size: 1em;
+    color: #d73a49;
+    text-decoration: none;
+    border: solid 2px #d73a49;
+    border-radius: 4px;
+    padding: 5px;
+
+}
+
+.plus{
+    font-size: small;
+    color: gray;
+}
+
+ul.flashes{
+    color: lightsalmon;
+    list-style: none;
+}
+
+img.icon_img{
+    width: 200px;
+}
+
+p.textpara{
+    border: solid 1px rgb(255, 210, 112);
+    padding: 40px;
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+label.param{
+    font-weight:bold;
+}
+
+.ensemble{
+    margin: 30px;
+}
+
+h1.info{
+    font-size: 100px;
+}
+
+/* form{
+    justify-content: center;
+    margin-top: 0%;
+    max-width: 450px;
+    margin: 0px auto;
+}
+
+.requete{
+    width: 500px;
+    overflow-x: hidden ;
+    overflow-y: auto;
+    padding: 10px;
+    margin: auto;
+    align-self: center;
+    margin-top: 0%;
+}
+
+label{
+    display: inline-block;
+    text-align: right;
+} */
+
+.titre_requ{
+    background-color: #2db769;
+    color: #fff;
+    padding: 10px;
+}
+
+
+
+.popup{
+    display: none;
+    max-width: 350px;
+    border:solid 1px rgb(18, 16, 90);
+    margin: 30px;
+    padding: 10px;
+    margin-bottom: 0%;
+}
+
+
+@media screen and (max-width: 1280px) {
+
+        h1{
+            color: #d73a49;
+        }
+    div.content{
+        padding: 20px;
+        background-image: url(/static/computer7.jpg);
+        background-position:top;
+        /* background-position-y: 200px;
+        background-position-x: left; */
+        background-size: 300%;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        color: rgb(58, 58, 58);
+        margin: Opx;
+        font-weight: 600;
+        border-bottom: solid 2px rgb(255, 251, 0);}
+
+
+    .menu{
+        font-size: 150%;
+    }
+    p.foot{
+        font-size: 140%;
+    }
+    .card{
+        font-size: 150%;
+    }
+    .card-body{
+        font-size: 150%;
+    }
+    .card-title{
+        font-size: 100%;
+    }
+    .intro{
+        font-size: 200%;
+    }
+    a{
+        font-size: 200%;
+    }
+}
